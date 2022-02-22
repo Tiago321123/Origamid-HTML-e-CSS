@@ -28,6 +28,27 @@ img{
     object-position: top right; /* aparecer a parte direita da imagem */
 }
 
+.object-fit2{
+    margin-top: 20px;
+    gap: 20px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 960px;
+    /* margin: 0 auto sendo usado com max-width para centralizar */
+    margin: 20px auto;
+}
+
+.object-fit2 img{ /* querer que a imagem e o texto tenham a mesma altura, se o texto fica mais comprido, a imagem fica também */
+    height: 100%;
+    object-fit: cover;
+    object-position: top right; /* aparecer a parte direita da imagem */
+}
+
+.object-fit2 p{
+    align-self: center;
+    max-width: 60ch; /* máximo de comprimento do texto, 60 a 75, ch é a largura do '0' */
+    font-size: 0.5rem;
+}
 
 @media (min-width: 800px){
     .min img{
