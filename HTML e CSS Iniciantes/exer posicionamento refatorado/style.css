@@ -31,7 +31,7 @@ header{
     justify-content: center;
     padding: 0;
     margin: 0;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
 a{
@@ -53,7 +53,7 @@ a{
 }
 
 main img{
-    max-width: 500px;
+    max-width: 100%;
 }
 
 
@@ -124,6 +124,8 @@ h1{
     color:#c6c6c6;
     background-image: url("./img/onda.svg");
     /* color: rgb(0, 0,0, 0.2); cinza bacana e fácil*/
+
+    /* word-break:break-all; caso precisar quebrar uma palavra, frase*/
 }
 
 h3{
@@ -174,9 +176,60 @@ h3{
 */
 
 footer{
+    max-width: 100%;
     background-color: #fff;
     display: flex;
     place-content: center;
     padding: 20px 0;
     font-size: 1.25rem;
+}
+
+
+@media (max-width:970px){
+    main{
+        grid-template-columns: 1fr;
+    }
+    .texto{
+        text-align: left;
+    }
+    .texto h1:before{
+        display: none;
+    }
+    .h2-txt h2{
+        text-align: center;
+        top:20px;
+        padding: 0;
+    }
+}
+
+@media (max-width:662px){
+    .texto{
+        margin-top: 80px;
+    }
+    .texto h1:before{
+        position: absolute;
+        height: 60px;
+        width: 4px;
+        margin: 230px auto;
+    }
+    
+    header{
+        gap:30px;
+    }
+
+    body{
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width:445px){
+    .menu ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+    }  
+    .menu ul li{
+        text-align: center;
+    }
 }
